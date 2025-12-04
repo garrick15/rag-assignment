@@ -5,6 +5,7 @@ import java.io.IOException;
 import dev.assignment.model.Resource;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -13,9 +14,13 @@ import javafx.stage.Stage;
 public class ContentViewerController {
 
     @FXML
+    private VBox root; // Add fx:id="root" in FXML top-level VBox
+    @FXML
     private TextArea contentArea;
 
     private Resource resource;
+
+    private boolean isDarkMode = false; // Track theme
 
     /**
      * Set the resource to display
@@ -43,5 +48,19 @@ public class ContentViewerController {
     private void handleClose() {
         Stage stage = (Stage) contentArea.getScene().getWindow();
         stage.close();
+    }
+
+    /**
+     * Toggle light/dark mode
+     */
+    @FXML
+    private void toggleTheme() {
+        isDarkMode = !isDarkMode;
+        root.getStylesheets().clear();
+        if (isDarkMode) {
+            root.getStylesheets().add(getClass().getResource("/dark.css").toExternalForm());
+        } else {
+            root.getStylesheets().add(getClass().getResource("/light.css").toExternalForm());
+        }
     }
 }
