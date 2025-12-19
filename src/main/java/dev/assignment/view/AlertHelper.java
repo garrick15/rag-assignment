@@ -2,6 +2,8 @@ package dev.assignment.view;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.DialogPane;
+import javafx.scene.control.Label;
 
 /**
  * Helper class for showing standardized alert dialogs
@@ -59,7 +61,14 @@ public class AlertHelper {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(title);
         alert.setHeaderText(header);
-        alert.setContentText(content);
+        
+        Label label = new Label(content);
+        label.setWrapText(true);
+        label.setMaxWidth(420);  
+
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.setContent(label);
+        dialogPane.setPrefWidth(460);
 
         return alert.showAndWait().orElse(ButtonType.CANCEL) == ButtonType.OK;
     }
@@ -71,7 +80,15 @@ public class AlertHelper {
         Alert alert = new Alert(type);
         alert.setTitle(title);
         alert.setHeaderText(header);
-        alert.setContentText(content);
+        
+        Label label = new Label(content);
+        label.setWrapText(true);
+        label.setMaxWidth(420);
+
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.setContent(label);
+        dialogPane.setPrefWidth(460);
+
         alert.showAndWait();
     }
 }

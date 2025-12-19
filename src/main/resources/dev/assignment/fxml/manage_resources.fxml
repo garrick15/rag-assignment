@@ -31,22 +31,13 @@
             </VBox.margin>
         </Label>
 
-        <Label text="Tip: Double-click a resource to view its content" textFill="#909090">
-            <font>
-                <Font size="11.0" />
-            </font>
-            <VBox.margin>
-                <Insets bottom="2.0" />
-            </VBox.margin>
-        </Label>
-
-        <Label text="Tip: PDF, Word, and PowerPoint files will be automatically converted to text"
+        <Label text="Tip: PDF files will be automatically converted to text"
             textFill="#909090">
             <font>
                 <Font size="11.0" />
             </font>
             <VBox.margin>
-                <Insets bottom="5.0" />
+                <Insets bottom="12.0" />
             </VBox.margin>
         </Label>
 
