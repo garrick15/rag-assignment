@@ -1,0 +1,147 @@
+.root {
+  -fx-font-family: "Arial";
+  -fx-font-size: 14px;
+}
+
+.label {
+  -fx-font-family: "Arial";
+  -fx-font-size: 14px;
+}
+
+#sessionNameLabel {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+}
+
+#sessionCreatedLabel {
+  -fx-font-size: 12px;
+}
+
+.button {
+  -fx-font-size: 13px;
+  -fx-border-radius: 4;
+  -fx-background-radius: 4;
+}
+
+#statusLabel, #modelLabel {
+  -fx-font-size: 11px;
+}
+
+#messageInput {
+  -fx-font-size: 14px;
+  -fx-background-radius: 4, 3;
+  -fx-background-insets: 0, 0;
+  -fx-border-radius: 4;
+  -fx-border-width: 1;
+  -fx-padding: 12 15 12 15;
+  -fx-focus-color: transparent;
+  -fx-faint-focus-color: transparent;
+  -fx-pref-height: 40;
+  -fx-max-height: 60;
+}
+
+.theme-switch {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+}
+
+.theme-switch .switch-background {
+  -fx-background-color: #ccc;
+  -fx-background-radius: 15;
+  -fx-padding: 3 20 3 3;
+}
+
+.theme-switch:selected .switch-background {
+  -fx-background-color: #3a7bd5;
+}
+
+.switch-thumb {
+  -fx-fill: white;
+}
+
+.theme-switch:selected .switch-thumb {
+  -fx-translate-x: 18;
+}
+
+.top-hbox {
+  -fx-padding: 20 10 10 10;
+}
+
+#chatContainer {
+  -fx-padding: 10 15 10 15;
+}
+
+#bottomBar {
+  -fx-padding: 5 10 5 10;
+  -fx-border-width: 1 0 0 0;
+}
+
+.message-input-box {
+  -fx-padding: 10 15 10 15;
+}
+
+.loading-overlay {
+  -fx-background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Chat area message (centered info/empty message) */
+.chat-area-message {
+  -fx-text-fill: #909090;
+  -fx-font-size: 14px;
+  -fx-text-alignment: center;
+}
+
+/* Sources label for AI messages */
+.sources-label {
+  -fx-text-fill: #909090;
+  -fx-font-size: 11px;
+}
+
+/* Sidebar session entry */
+.sidebar-session-entry {
+  -fx-cursor: hand;
+  -fx-padding: 4 10 0 0;
+}
+
+/* Session name label */
+.session-name {
+  -fx-font-size: 13px;
+}
+
+.session-name-selected {
+  -fx-font-weight: bold;
+  -fx-font-size: 13px;
+}
+
+/* Transparent menu button */
+.menu-button-transparent {
+  -fx-background-color: transparent;
+}
+
+/* Muted/secondary labels */
+.muted-label {
+  -fx-text-fill: #909090;
+  -fx-font-size: 13px;
+}
+
+.error-label {
+  -fx-text-fill: #ff0000;
+  -fx-font-size: 13px;
+}
+
+/* Resource list cell */
+.resource-count {
+  -fx-text-fill: #909090;
+  -fx-font-size: 11px;
+}
+
+/* Progress dialog */
+.progress-status {
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+}
+
+.progress-detail {
+  -fx-font-size: 12px;
+  -fx-text-fill: #606060;
+}
